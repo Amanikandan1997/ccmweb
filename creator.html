@@ -46,6 +46,29 @@
   from { transform: rotateY(0deg);   }
   to   { transform: rotateY(360deg); }
 }
+
+
+ .scrolling-text-container {
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 15s linear infinite;
+    font-size: 1.1rem;
+  }
+
+  @keyframes scroll-text {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
  </style>
 
  
@@ -56,7 +79,16 @@
 
     <!--<div id="preloader"></div>-->
     <header>
+
+        
         <section class="top_section">
+            <!-- Scrolling Text Banner -->
+<!-- Scrolling Text Banner -->
+      <div class="scrolling-text-container bg-dark text-white py-2" style="background-color:#06432a ;">
+  <div class="scrolling-text">
+    <strong>Capecomorin Media</strong> - இது திறமைக்கு இடம் தரும் மீடியா
+  </div>
+</div>
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-lg-2 col-md-12 logo-sec">
@@ -86,11 +118,12 @@
                 </div>
             </div>
         </section>
+  
         <section class="nav_section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+                      <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
 
                             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                                 <div class="offcanvas-header" style="background-color: yellowgreen;">
@@ -119,10 +152,10 @@
                                             <a href="/award.html" title="Tamizhan Awards" class="nav-link " href="#">Tamilan Award Register </a>
                                         </li>
                                         <li>
-                                            <a href="/about.html" title="About Us" class="nav-link " href="#">About Us</a>
+                                            <a href="/about.html" title="About Us" class="nav-link " href="#">About</a>
                                         </li>
                                         <li>
-                                            <a href="/contact.html" title="About Us" class="nav-link " href="#">Contact Us</a>
+                                            <a href="/contact.html" title="About Us" class="nav-link " href="#">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -146,91 +179,117 @@
                 </div>
             </div>
         </section>
+        
     </header>
     <main>
 
 
       
 
-        <section class="latest-trailer-sec pt-4 pb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="latest_tr">
-                            <div class="d-inline-block tab_heading">
-                                <h5 class="me-3 d-inline-block text-green text-center">Creator Thiruvizha Registration</h5>
-                                <div class="d-inline-block">
-                                    <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                                            </ul> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   <section class="creator-form-section py-5">
+       <section class="latest-trailer-sec pt-4 pb-4">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-10 col-lg-8">
-        <div class="form-card p-4 shadow rounded bg-light">
-          <h3 class="text-center text-success mb-4">Creator Thiruvizha Registration</h3>
-          <form action="/submit_creator_registration" method="POST">
-            <div class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your full name">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Enter your phone number">
-            </div>
-            <div class="mb-3">
-              <label for="category" class="form-label">Category</label>
-              <select class="form-select" id="category" name="category" required>
-                <option value="">Select Category</option>
-                <option value="Vlogger">Vlogger</option>
-                <option value="Dancer">Dancer</option>
-                <option value="Comedian">Comedian</option>
-                <option value="Singer">Singer</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="instagram" class="form-label">Instagram Link</label>
-              <input type="url" class="form-control" id="instagram" name="instagram" placeholder="https://instagram.com/yourprofile">
-            </div>
-            <div class="mb-3">
-              <label for="youtube" class="form-label">YouTube Link</label>
-              <input type="url" class="form-control" id="youtube" name="youtube" placeholder="https://youtube.com/channel/...">
-            </div>
-            <div class="mb-3">
-              <label for="state" class="form-label">State</label>
-              <input type="text" class="form-control" id="state" name="state" required placeholder="Enter your state">
-            </div>
-            <div class="mb-3">
-              <label for="district" class="form-label">District</label>
-              <input type="text" class="form-control" id="district" name="district" required placeholder="Enter your district">
-            </div>
-            <div class="mb-3">
-              <label for="address" class="form-label">Full Address</label>
-              <textarea class="form-control" id="address" name="address" rows="3" required placeholder="Enter your address"></textarea>
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-success btn-lg">Register Now</button>
-            </div>
-          </form>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="latest_tr">
+          <div class="d-inline-block tab_heading">
+            <h5 class="me-3 d-inline-block text-success text-center">Creator Thiruvizha Registration</h5>
+          </div>
         </div>
       </div>
+
+      <section class="creator-form-section py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+              <div class="form-card p-4 shadow rounded bg-light">
+                <h3 class="text-center text-success mb-4">Creator Thiruvizha Registration</h3>
+                <form id="creatorForm">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your full name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Enter your phone number">
+                  </div>
+                  <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" id="category" name="category" required>
+                      <option value="">Select Category</option>
+                      <option value="Vlogger">Vlogger</option>
+                      <option value="Dancer">Dancer</option>
+                      <option value="Comedian">Comedian</option>
+                      <option value="Singer">Singer</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="instagram" class="form-label">Instagram Link</label>
+                    <input type="url" class="form-control" id="instagram" name="instagram" placeholder="https://instagram.com/yourprofile">
+                  </div>
+                  <div class="mb-3">
+                    <label for="youtube" class="form-label">YouTube Link</label>
+                    <input type="url" class="form-control" id="youtube" name="youtube" placeholder="https://youtube.com/channel/...">
+                  </div>
+                  <div class="mb-3">
+                    <label for="state" class="form-label">State</label>
+                    <input type="text" class="form-control" id="state" name="state" required placeholder="Enter your state">
+                  </div>
+                  <div class="mb-3">
+                    <label for="district" class="form-label">District</label>
+                    <input type="text" class="form-control" id="district" name="district" required placeholder="Enter your district">
+                  </div>
+                  <div class="mb-3">
+                    <label for="address" class="form-label">Full Address</label>
+                    <textarea class="form-control" id="address" name="address" rows="3" required placeholder="Enter your address"></textarea>
+                  </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">Register Now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
 </section>
 
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-success">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="successModalLabel">Registration Successful</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Thank you for registering! We’ve received your information.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-danger">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="errorModalLabel">Submission Failed</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Oops! Something went wrong. Please try again.
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -268,7 +327,7 @@
                             <a href="#" class="bs_value_logo me-3">
                         <img src="/assest/ccmlogo.png">
                         </a>
-                            <div class="play-store">
+                            <!-- <div class="play-store">
                                 <p class="mb-1 footer_heading_cm">Download App From</p>
                                 <ul class="mb-0 ps-0">
                                     <li class="d-inline-block me-2"><a href="https://play.google.com/store/apps/details?id=com.gridsandguides.ccmvalue" target="blank"> <img src="/assest/themes/ccm/images/app/1_0000_google-play-copy.png"></a></li>
@@ -277,25 +336,10 @@
                                     <li class="d-inline-block me-2"><a href="https://apps.apple.com/us/app/bs-value/id1537233387" target="blank"><img src="/assest/themes/ccm/images/app/1_0003_app-store-copy.png"></a></li>
                                     <li class="d-inline-block me-0"><a href="https://play.google.com/store/apps/details?id=com.gridsandguides.tvbsvalue" target="blank"><img src="/assest/themes/ccm/images/app/1_0004_androidtv-copy.png"></a></li>
                                 </ul>
-                            </div>
-                        </div>
+                            </div> -->
+                        <!-- </div>  -->
                     </div>
-                    <!--<div class="col-md-6">
-                     <div class="right-bs-value">
-                           <a href="#" class="bs_value_logo me-3">
-                                <img src="/assest/themes/ccm/images/logo-main.png">
-                            </a>
-                        <div class="play-store">
-                           <p class="mb-1 footer_heading_cm">Download App From</p>
-                           <ul class="mb-0 ps-0">
-                              <li class="d-inline-block me-2"><a href="https://play.google.com/store/apps/details?id=com.gridsandguides.ccmvalue" target="blank"><img src="/assest/themes/ccm/images/google-play.png"></a></li>
-                              <li class="d-inline-block me-2"><a href="https://apps.apple.com/us/app/bs-value/id1537233387" target="blank"><img src="/assest/themes/ccm/images/app-store.png"></a></li>
-                              <li class="d-inline-block me-2"><a href="https://apps.apple.com/us/app/bs-value/id1537233387" target="blank"><img src="/assest/themes/ccm/images/app-store.png"></a></li>
-                              <li class="d-inline-block me-0"><a href="https://apps.apple.com/us/app/bs-value/id1537233387" target="blank"><img src="/assest/themes/ccm/images/app-store.png"></a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>-->
+                    
                     <div class="col-md-12 mobile-order-1 mid-secreen">
                         <div class="footer_menu_link">
                             <ul class="mb-0 ps-0">
@@ -339,99 +383,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/TextPlugin.min.js"></script>
     <script src="/assest/themes/ccm/js/demo.js"></script>
     <script src="/assest/themes/ccm/js/custom.js?v=1"></script>
-    <script>
-        $('.moreless-button').click(function() {
+    
 
-            $(this).closest('.row').find('.moretext').slideToggle();
-            $(this).html('');
-            let seemore = $(this).text();
-            if (seemore.trim() == "See More") {
-                $(this).html("See Less <a https:'.moretext'><i class='fa fa-play' aria-hidden='true'></i></a>")
-            } else {
-                $(this).html("See More <i class='fa fa-play' aria-hidden='true'></i>")
-            }
-        });
-        $('.youtubeurl').click(function() {
-            let yurl = $(this).attr('yurl');
-            let staticbackdrop = $(this).attr('data-bs-target');
-            $(staticbackdrop).find('iframe').attr("src", yurl);
-        });
-
-        setInterval(function() {
-            $('.count').each(function() {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 3000,
-                    easing: 'swing',
-                    step: function(now) {
-                        $(this).text(Math.ceil(now));
-                    }
-                });
-            });
-        }, 5000);
-
-        rotationSliderAuto();
-
-        function rotationSliderAuto() {
-            $('li.navigation-item').each(function(index) {
-                var $element = $(this);
-                setTimeout(function() {
-                    $element.mouseenter()
-                    $element.click();
-                }, index * 5000);
-            });
-        }
-
-        setInterval(function() {
-            rotationSliderAuto();
-        }, 35000);
-
-
-        jQuery(function($) {
-            $('#web-series-tab').click();
-            $('.search-form .search-field').autocomplete({
-                source: function(request, response) {
-                    $.ajax({
-                        dataType: 'json',
-                        url: AutocompleteSearch.ajax_url,
-                        data: {
-                            term: request.term,
-                            action: 'autocompleteSearch',
-                            security: AutocompleteSearch.ajax_nonce,
-                        },
-                        success: function(data) {
-                            response(data);
-                        }
-                    });
-                },
-                select: function(event, ui) {
-                    window.location.href = ui.item.link;
-                },
-            });
-        });
-    </script>
-
-    <!--<script>
-        document.onreadystatechange = function () {
-            if (document.readyState !== "complete") {
-                document.querySelector(
-                    "body").style.visibility = "hidden";
-                document.querySelector(
-                    "#loader").style.visibility = "visible";
-            } else {
-                document.querySelector(
-                    "#loader").style.display = "none";
-                document.querySelector(
-                    "body").style.visibility = "visible";
-            }
-        };
-    </script>-->
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K94C4C98"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+   
 
 </body>
 
@@ -440,61 +394,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-body">
-            <div class="row">
-                     <div class="col-md-3">
-                        <div class="payment_gateway_logo">
-                           <a href="#">
-                           <img src="/assest/uploads/2023/07/800x900-6.jpg">
-                           </a>
-                        </div>
-                     </div>
-                     <div class="col-md-9">
-                        <div class="row">
-                           <div class="col-md-11">
-                              <div class="payment_right_cnt">
-                                 <h2>ccm Nachachitra Kondattam</h2>
-                                 <p>Pondy Marina, Puducherry | <span style="font-size:12px;">16-09-2023 6:00pm</span></p>
-                                 <hr>
-                              </div>
-                           </div>
-                           <div class="col-md-1">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                 <span aria-hidden="true">&times;</span>
-                              </button>
-                           </div>
-                           <div class="col-md-12">
-                              <div class="event_next">
-                                 <div class="row">
-                                    <div class="col-md-12">
-                                       <p>Watch your favorite ccm Natchthirams who are here to entertain you with unlimited entertainment, fun, dance and songs.</p>
-                                    </div>
-                                    <a href="/event_show/ccm-nachachitra-kondattam-2/">
-                                       <button type="submit" class="proceed_btn" style="width: 40%; margin-left:0px;">Click here to Book Tickets</button>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     
-                  </div>
-            </div>
-         </div>
-   </div>
-</div> -->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content" style="width:500px;">
-            <img src="/assest/uploads/2023/06/Pondicherry-Kondaatam-Postponed.jpg">
-        </div>
-    </div>
-</div>
+
 
 
 <!-- Optional JavaScript -->
@@ -506,3 +407,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     //      $('#exampleModal').modal('show');
     //  });
 </script>
+<script>
+  const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"; // Replace with your actual Apps Script URL
+  const form = document.getElementById("creatorForm");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      category: form.category.value,
+      instagram: form.instagram.value,
+      youtube: form.youtube.value,
+      state: form.state.value,
+      district: form.district.value,
+      address: form.address.value
+    };
+
+    try {
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+      if (result.result === "success") {
+        const successModal = new bootstrap.Modal(document.getElementById("successModal"));
+        successModal.show();
+        form.reset();
+      } else {
+        const errorModal = new bootstrap.Modal(document.getElementById("errorModal"));
+        errorModal.show();
+      }
+    } catch (err) {
+      console.error("Error!", err.message);
+      const errorModal = new bootstrap.Modal(document.getElementById("errorModal"));
+      errorModal.show();
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

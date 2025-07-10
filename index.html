@@ -47,26 +47,58 @@
   to   { transform: rotateY(360deg); }
 }
 /* Floating WhatsApp Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    height: 60px;
-    width: 60px;
-    background-color: #25d366;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: bounce 2s infinite;
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 10px;
+
+  font-family: Arial, sans-serif;
 }
 
 .whatsapp-float img {
-    width: 35px;
-    height: 35px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
+
+.whatsapp-popup {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 240px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.whatsapp-popup p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.whatsapp-popup .chat-now {
+  background-color: #25D366;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -80,6 +112,7 @@
     right: 20px;
     display: none;
     z-index: 999;
+    border-radius: 20px;
 }
 
  .video_play {
@@ -168,10 +201,10 @@
                                             <a href="/award.html" title="Tamizhan Awards" class="nav-link " href="#">Tamilan Award Register </a>
                                         </li>
                                         <li>
-                                            <a href="/about.html" title="About Us" class="nav-link " href="#">About Us</a>
+                                            <a href="/about.html" title="About Us" class="nav-link " href="#">About</a>
                                         </li>
                                         <li>
-                                            <a href="/contact.html" title="About Us" class="nav-link " href="#">Contact Us</a>
+                                            <a href="/contact.html" title="About Us" class="nav-link " href="#">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -241,33 +274,33 @@
                <a class="stop"><i class="fa fa-pause"></i></a>
             </div> -->
         </section>
-        <section class="about_sec">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="ctn_abt">
-                            <span class="pink-text" style="font-size:45px">Who Are We?</span>
-                            <div class="ctn_abt">
-                                <p class="paragraph_lg text-gray-md text-justify"><span class="pink-text"><em>ccm</em></span> &#8211; a frontrunner in the entertainment sector, ever since its inception, has strived hard to bring out the best content that caters to the needs of audience from different
-                                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, exercitationem corrupti obcaecati esse dignissimos modi ut ea voluptatem possimus nemo harum excepturi suscipit. Illum ipsa in et numquam culpa!.</p>
-                            </div>
-                            <p>
-                                <script src="moz-extension://d8088f60-e910-49a7-9db6-275eb2712aa8/js/app.js" type="text/javascript"></script>
-                            </p>
-                            <p>
-                                <script src="moz-extension://d8088f60-e910-49a7-9db6-275eb2712aa8/js/app.js" type="text/javascript"></script>
-                            </p>
-                            <p>
-                                <script src="moz-extension://9f875334-2a22-4408-9b0a-ac113ebb4b58/js/app.js" type="text/javascript"></script>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="/assest/kd.png" alt="" />
-                    </div>
+       <section class="about_sec py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="ctn_abt">
+                    <h2 class="text-green mb-4" style="font-size: 45px;">Who Are We?</h2>
+                    <p class="paragraph_lg text-gray-md text-justify">
+                        <span class="pink-text"><em>Cape Comorin Media (CCM)</em></span> is a leading name in the entertainment and digital content space, born out of a vision to amplify diverse voices and rich storytelling. Established in 2021, CCM began as a small creative studio in southern India, driven by a team passionate about film, music, and digital media.
+                    </p>
+                    <p class="paragraph_lg text-gray-md text-justify">
+                        Over the years, we've evolved into a full-fledged media powerhouse, delivering high-impact productions across film, web, audio, and branded content. Our commitment lies in pushing creative boundaries and embracing emerging technologies to connect cultures and communities globally.
+                    </p>
+                    <p class="paragraph_lg text-gray-md text-justify">
+                        Today, CCM stands at the intersection of tradition and innovation, producing compelling content that resonates with a diverse and dynamic audience.
+                    </p>
                 </div>
             </div>
-        </section>
+
+            <!-- Image -->
+            <div class="col-md-6 text-center" data-aos="fade-left">
+                <img src="/assest/kd.png" alt="Cape Comorin Media" class="img-fluid rounded shadow" />
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section class="latest-trailer-sec pt-4 pb-4">
   <div class="container">
@@ -475,9 +508,18 @@
 
 
         <!-- Floating WhatsApp -->
-<a href="https://wa.me/918300767907" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDj4c23fIHuhgJoTe9tQUMFJ4pNrsYCG43zSLaCH_lf7Oz97vYyoBlTC3DdLZxGDFkPtQ&usqp=CAU" alt="WhatsApp" />
-</a>
+<!-- Floating WhatsApp Button -->
+<div class="whatsapp-container">
+  <div class="whatsapp-popup" id="whatsappPopup">
+    <p>👋 Hi there! How can we help you?</p>
+    <a href="https://wa.me/918300767907" target="_blank" class="chat-now">Chat on WhatsApp</a>
+  </div>
+
+  <a href="javascript:void(0);" class="whatsapp-float" onclick="toggleWhatsappPopup()" title="Chat on WhatsApp">
+    <img src="/assest/w.png" alt="WhatsApp" />
+  </a>
+</div>
+
 
 <!-- Scroll to Top Button -->
 <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top">
@@ -493,9 +535,9 @@
                     <div class="col-md-6 mobile-order-2">
 
                         <div class="left-black-ship">
-                            <a href="javascript:;" class="black-ship-logo me-3">
-                        <img src="/assest/uploads/2023/06/ccm-Frame.png">
-                        </a>
+                          <a href="https://capecomorinmedia.com" class="logo-container">
+  <img src="/assest/ccmlogo.png" class="continuous-flip" alt="Cape Comorin Media Logo" />
+</a>
                             <div class="social_media">
                                 <p class="mb-1 footer_heading_cm">Follow us on</p>
                                 <ul class="mb-0 ps-0">
@@ -656,26 +698,9 @@
         });
     </script>
 
-    <!--<script>
-        document.onreadystatechange = function () {
-            if (document.readyState !== "complete") {
-                document.querySelector(
-                    "body").style.visibility = "hidden";
-                document.querySelector(
-                    "#loader").style.visibility = "visible";
-            } else {
-                document.querySelector(
-                    "#loader").style.display = "none";
-                document.querySelector(
-                    "body").style.visibility = "visible";
-            }
-        };
-    </script>-->
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K94C4C98"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
+  
 
 </body>
 
@@ -684,61 +709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-body">
-            <div class="row">
-                     <div class="col-md-3">
-                        <div class="payment_gateway_logo">
-                           <a href="#">
-                           <img src="/assest/uploads/2023/07/800x900-6.jpg">
-                           </a>
-                        </div>
-                     </div>
-                     <div class="col-md-9">
-                        <div class="row">
-                           <div class="col-md-11">
-                              <div class="payment_right_cnt">
-                                 <h2>ccm Nachachitra Kondattam</h2>
-                                 <p>Pondy Marina, Puducherry | <span style="font-size:12px;">16-09-2023 6:00pm</span></p>
-                                 <hr>
-                              </div>
-                           </div>
-                           <div class="col-md-1">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                 <span aria-hidden="true">&times;</span>
-                              </button>
-                           </div>
-                           <div class="col-md-12">
-                              <div class="event_next">
-                                 <div class="row">
-                                    <div class="col-md-12">
-                                       <p>Watch your favorite ccm Natchthirams who are here to entertain you with unlimited entertainment, fun, dance and songs.</p>
-                                    </div>
-                                    <a href="/event_show/ccm-nachachitra-kondattam-2/">
-                                       <button type="submit" class="proceed_btn" style="width: 40%; margin-left:0px;">Click here to Book Tickets</button>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     
-                  </div>
-            </div>
-         </div>
-   </div>
-</div> -->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content" style="width:500px;">
-            <img src="/assest/uploads/2023/06/Pondicherry-Kondaatam-Postponed.jpg">
-        </div>
-    </div>
-</div>
 
 
 <!-- Optional JavaScript -->
@@ -798,4 +769,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $('#videoFrame').attr('src', '');
     });
   });
+</script>
+<!-- AOS Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+<!-- whatsapp float -->
+ <script>
+ function toggleWhatsappPopup() {
+  var popup = document.getElementById("whatsappPopup");
+  popup.style.display = "block";
+
+  setTimeout(function() {
+    popup.style.display = "none";
+  }, 6000); // auto close after 6 seconds
+}
 </script>
